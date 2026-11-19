@@ -1,5 +1,5 @@
 /* Kedili Bahçe: çevrimdışı çalışma. Önce ağ (güncel sürüm), ağ yoksa önbellek. */
-const SURUM = 'kedili-bahce-2026-11-19.1-a31c1f3296';
+const SURUM = 'kedili-bahce-2026-11-19.2-289180a70b';
 const DOSYALAR = ['./', 'index.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(SURUM).then(c => c.addAll(DOSYALAR)).then(() => self.skipWaiting())); });
 const ZIL = 'kedili-bahce-zil';   /* sayfanın yazdığı bildirim metni burada durur */
